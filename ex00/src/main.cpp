@@ -3,35 +3,43 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pipe <pipe@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 16:58:00 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/17 17:45:23 by dbonilla         ###   ########.fr       */
+/*   Updated: 2024/12/17 21:39:05 by pipe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 
+
+
 int main() {
-    // const Animal *meta = new Animal();
-    const Animal *dog = new Dog();
-    const Animal *cat = new Cat();
+    std::cout << "\n=== Creación de Objetos ===" << std::endl;
 
-    std::cout << "\n=== Testing Types ===" << std::endl;
-    std::cout << dog->getType() << std::endl;
-    std::cout << cat->getType() << std::endl;
+    // Crear un Dog y un Cat originales
+    Dog originalDog;
+    Cat originalCat;
 
-    std::cout << "\n=== Testing Sounds ===" << std::endl;
-    cat->makeSound();
-    dog->makeSound();
-    // meta->makeSound();
+    std::cout << "\n=== Prueba de Tipos ===" << std::endl;
+    std::cout << "Dog type: " << originalDog.getType() << std::endl;
+    std::cout << "Cat type: " << originalCat.getType() << std::endl;
 
-    std::cout << "\n=== Deleting Objects ===" << std::endl;
-    // delete meta;
-    delete dog;
-    delete cat;
+    std::cout << "\n=== Prueba de Sonidos ===" << std::endl;
+    originalDog.makeSound();
+    originalCat.makeSound();
+
+    std::cout << "\n=== Constructor de Copia ===" << std::endl;
+
+    // Invocación explícita del constructor de copia
+    Dog copiedDog(originalDog);
+    Cat copiedCat(originalCat);
+
+    std::cout << "Copied Dog type: " << copiedDog.getType() << std::endl;
+    std::cout << "Copied Cat type: " << copiedCat.getType() << std::endl;
+
+    std::cout << "\n=== Destrucción de Objetos ===" << std::endl;
 
     return 0;
 }
