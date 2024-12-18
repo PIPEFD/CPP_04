@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pipe <pipe@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:12:57 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/18 17:13:16 by dbonilla         ###   ########.fr       */
+/*   Updated: 2024/12/19 00:02:09 by pipe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,51 @@
 #include "Cat.hpp"
 
 int main() {
-    // Crear instancias de Dog y Cat
+    std::cout << "\n=== Creación de Objetos ===" << std::endl;
     const AAnimal *dog = new Dog();
     const AAnimal *cat = new Cat();
 
-    std::cout << "\n=== Testing Types ===" << std::endl;
-    std::cout << "Dog type: " << dog->getType() << std::endl;
-    std::cout << "Cat type: " << cat->getType() << std::endl;
-
-    std::cout << "\n=== Testing Sounds ===" << std::endl;
-    cat->makeSound();
+    std::cout << "\n=== Prueba de Sonidos ===" << std::endl;
     dog->makeSound();
-    
+    cat->makeSound();
 
-    std::cout << "\n=== Testing Copy Constructor ===" << std::endl;
-    Dog originalDog;              // Constructor por defecto
-    originalDog.setIdea(0, "I want a bone!");
-    std::cout << "Original Dog idea[0]: " << originalDog.getIdea(0) << std::endl;
-
-    Dog copiedDog(originalDog);   // Constructor de copia
-    std::cout << "Copied Dog idea[0]: " << copiedDog.getIdea(0) << std::endl;
-
-    // Modificar la idea del perro copiado
-    copiedDog.setIdea(0, "I want to run!");
-    std::cout << "Original Dog idea[0]: " << originalDog.getIdea(0) << std::endl;
-    std::cout << "Copied Dog idea[0]: " << copiedDog.getIdea(0) << std::endl;
-    copiedDog.makeSound();
-    std::cout << "\n=== Deleting Objects ===" << std::endl;
+    std::cout << "\n=== Eliminación de Objetos ===" << std::endl;
     delete dog;
     delete cat;
+
+    std::cout << "\n=== Uso de Array Polimórfico con Clase Abstracta ===" << std::endl;
+    const AAnimal *animals[4];
+    animals[0] = new Dog();
+    animals[1] = new Cat();
+    animals[2] = new Dog();
+    animals[3] = new Cat();
+
+    std::cout << "\n=== Prueba de Polimorfismo en Array ===" << std::endl;
+    for (int i = 0; i < 4; ++i) {
+        animals[i]->makeSound();
+    }
+
+    std::cout << "\n=== Liberación de Objetos del Array ===" << std::endl;
+    for (int i = 0; i < 4; ++i) {
+        delete animals[i];
+    }
+
+    std::cout << "\n=== Prueba de Constructor de Copia ===" << std::endl;
+    Dog originalDog;
+    originalDog.makeSound();
+    Dog copiedDog(originalDog); // Llamada al constructor de copia
+    copiedDog.makeSound();
+
+    std::cout << "\n=== Prueba de Operador de Asignación ===" << std::endl;
+    Dog assignedDog;
+    assignedDog = originalDog; // Llamada al operador de asignación
+    assignedDog.makeSound();
+
+    std::cout << "\n=== Modificación de Valores ===" << std::endl;
+    std::cout << "Modificando tipo en assignedDog..." << std::endl;
+    assignedDog.makeSound();
+
+    std::cout << "\n=== Finalización ===" << std::endl;
 
     return 0;
 }

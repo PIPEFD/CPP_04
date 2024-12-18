@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pipe <pipe@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:46:27 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/18 17:14:00 by dbonilla         ###   ########.fr       */
+/*   Updated: 2024/12/18 23:52:37 by pipe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,3 @@ std::string AAnimal::getType() const
     return (type);
 }
 
-void AAnimal::makeSound()
-{
-    
-}

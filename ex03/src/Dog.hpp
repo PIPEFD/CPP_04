@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pipe <pipe@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:32:59 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/18 14:06:22 by dbonilla         ###   ########.fr       */
+/*   Updated: 2024/12/18 23:59:24 by pipe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 #define DOG_H
 
-#include "AAnimal.hpp";
-#include "Brain.hpp";
+#include "AAnimal.hpp"
+#include "Brain.hpp"
 
 class Dog : public AAnimal
 {
@@ -27,7 +27,7 @@ class Dog : public AAnimal
         Dog &operator=(const Dog &rhs);
         ~Dog();
 
-        void makeSound();
+        void makeSound() const ;
         void setIdea(int index, const std::string &idea);
         std::string getIdea(int index) const;
     

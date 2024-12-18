@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pipe <pipe@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:02:34 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/18 14:06:10 by dbonilla         ###   ########.fr       */
+/*   Updated: 2024/12/18 23:58:00 by pipe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 #define CAT_H
 
-#include "AAnimal.hpp";
-#include "Brain.hpp";
+#include "AAnimal.hpp"
+#include "Brain.hpp"
 
 class Cat : public AAnimal
 {
@@ -25,7 +25,7 @@ class Cat : public AAnimal
         Cat();
         Cat(const Cat &other);
         Cat &operator=(const Cat &rhs);
-        ~Cat();
+        virtual ~Cat();
 
         void makeSound() const;
         void setIdea(int index, const std::string &idea);

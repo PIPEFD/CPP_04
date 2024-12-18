@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pipe <pipe@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 14:09:59 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/18 14:19:45 by dbonilla         ###   ########.fr       */
+/*   Updated: 2024/12/18 23:56:46 by pipe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,17 @@ Dog::~Dog()
     std::cout << " Dog Desctruted" << std::endl;
 }
 
-void Dog::makeSound()
+void Dog::makeSound() const
 {
     std::cout << "Guaaaaaauuuuuu Guauuuuuuu" << std::endl;
 }
 
-void Dog::getIdea()
+std::string Dog::getIdea(int index) const
 {
-    
+    return (brain->getIdea(index));
+}
+
+void Dog::setIdea(int index, const std::string &idea)
+{
+    brain->setIdea(index, idea);
 }

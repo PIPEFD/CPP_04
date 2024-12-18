@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pipe <pipe@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:02:30 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/18 14:14:17 by dbonilla         ###   ########.fr       */
+/*   Updated: 2024/12/19 00:05:47 by pipe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Cat &Cat::operator=(const Cat &rhs)
     return(*this);
 }
 
-Cat::Cat()
+Cat::~Cat()
 {
     delete (brain);
     std::cout << "Cat Destructed" << std::endl;

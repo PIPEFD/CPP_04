@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pipe <pipe@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:40:32 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/18 17:11:22 by dbonilla         ###   ########.fr       */
+/*   Updated: 2024/12/18 23:58:59 by pipe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ class AAnimal
         AAnimal();
         AAnimal(const AAnimal &other);
         AAnimal &operator=(const AAnimal &rhs);
-        ~AAnimal();
+        virtual ~AAnimal();
         
-        virtual void makeSound() = 0; 
+        virtual void makeSound() const  = 0; 
         std::string getType() const;
 };
 
