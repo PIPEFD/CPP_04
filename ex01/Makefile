@@ -5,7 +5,8 @@ SRC_DIR = src/
 SRC_FILES =  main.cpp \
 			Animal.cpp \
 			Cat.cpp \
-			Dog.cpp
+			Dog.cpp \
+			Brain.cpp
 
 SRC         =   $(addprefix $(SRC_DIR), $(SRC_FILES))
 OBJ_DIR		=	objs/
