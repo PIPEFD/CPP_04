@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pipe <pipe@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 17:16:03 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/18 11:58:50 by dbonilla         ###   ########.fr       */
+/*   Updated: 2024/12/18 23:59:12 by pipe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Cat : public Animal
         Cat();
         Cat(const Cat &other);
         Cat &operator=(const Cat &rhs);
-        virtual ~Cat();
+        ~Cat();
         
         void makeSound() const;
         void setIdea(int index, const std::string &idea);
