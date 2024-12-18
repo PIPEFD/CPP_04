@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/17 17:45:25 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/18 12:57:23 by dbonilla         ###   ########.fr       */
+/*   Created: 2024/12/18 17:12:57 by dbonilla          #+#    #+#             */
+/*   Updated: 2024/12/18 17:13:16 by dbonilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 int main() {
     // Crear instancias de Dog y Cat
-    const Animal *dog = new Dog();
-    const Animal *cat = new Cat();
+    const AAnimal *dog = new Dog();
+    const AAnimal *cat = new Cat();
 
     std::cout << "\n=== Testing Types ===" << std::endl;
     std::cout << "Dog type: " << dog->getType() << std::endl;
@@ -25,6 +25,7 @@ int main() {
     std::cout << "\n=== Testing Sounds ===" << std::endl;
     cat->makeSound();
     dog->makeSound();
+    
 
     std::cout << "\n=== Testing Copy Constructor ===" << std::endl;
     Dog originalDog;              // Constructor por defecto
