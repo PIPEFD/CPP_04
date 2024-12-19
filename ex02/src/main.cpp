@@ -6,7 +6,7 @@
 /*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:12:57 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/19 18:05:54 by dbonilla         ###   ########.fr       */
+/*   Updated: 2024/12/19 18:17:18 by dbonilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,23 +46,23 @@ int main() {
     std::cout << "\n=== Prueba de Constructor de Copia Dog ===" << std::endl;
     Dog originalDog;
     originalDog.makeSound();
-    Dog copiedDog(originalDog); // Llamada al constructor de copia
+    Dog copiedDog(originalDog);
     copiedDog.makeSound();
 
     std::cout << "\n=== Prueba de Constructor de Copia Cat ===" << std::endl;
     Cat originalCat;
     originalCat.makeSound();
-    Cat copiedCat(originalCat); // Llamada al constructor de copia
+    Cat copiedCat(originalCat);
     copiedCat.makeSound();
 
     std::cout << "\n=== Prueba de Operador de Asignación clase Dog ===" << std::endl;
     Dog assignedDog;
-    assignedDog = originalDog; // Llamada al operador de asignación
+    assignedDog = originalDog;
     assignedDog.makeSound();
 
     std::cout << "\n=== Prueba de Operador de Asignación clase Dog ===" << std::endl;
     Cat assignedCat;
-    assignedCat = originalCat; // Llamada al operador de asignación
+    assignedCat = originalCat; 
     assignedCat.makeSound();
 
     

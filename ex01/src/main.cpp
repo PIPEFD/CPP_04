@@ -6,7 +6,7 @@
 /*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 17:45:25 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/18 12:57:23 by dbonilla         ###   ########.fr       */
+/*   Updated: 2024/12/19 18:17:57 by dbonilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Cat.hpp"
 
 int main() {
-    // Crear instancias de Dog y Cat
+    
     const Animal *dog = new Dog();
     const Animal *cat = new Cat();
 
@@ -27,14 +27,14 @@ int main() {
     dog->makeSound();
 
     std::cout << "\n=== Testing Copy Constructor ===" << std::endl;
-    Dog originalDog;              // Constructor por defecto
+    Dog originalDog;              
     originalDog.setIdea(0, "I want a bone!");
     std::cout << "Original Dog idea[0]: " << originalDog.getIdea(0) << std::endl;
 
-    Dog copiedDog(originalDog);   // Constructor de copia
+    Dog copiedDog(originalDog);   
     std::cout << "Copied Dog idea[0]: " << copiedDog.getIdea(0) << std::endl;
 
-    // Modificar la idea del perro copiado
+    
     copiedDog.setIdea(0, "I want to run!");
     std::cout << "Original Dog idea[0]: " << originalDog.getIdea(0) << std::endl;
     std::cout << "Copied Dog idea[0]: " << copiedDog.getIdea(0) << std::endl;
@@ -43,5 +43,5 @@ int main() {
     delete dog;
     delete cat;
 
-    return 0;
+    return (0);
 }
