@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pipe <pipe@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 14:09:59 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/18 23:56:46 by pipe             ###   ########.fr       */
+/*   Updated: 2024/12/19 18:06:46 by dbonilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,24 @@ Dog::Dog(const Dog &other) : AAnimal(other)
 
 Dog &Dog::operator=(const Dog &rhs)
 {
-    if (this !=  &rhs)
-    {
-        AAnimal::operator=(rhs);
-        delete (brain);
-        type = rhs.type;
+    if (this != &rhs) {
+        AAnimal::operator=(rhs);        
+        if (brain) {
+            delete brain;
+            brain = NULL; 
+        }        
+        if (rhs.brain) {
+            brain = new Brain(*rhs.brain);
+        }
     }
-    return(*this);
+    return (*this);
 }
+
 
 Dog::~Dog()
 {
     delete (brain);
+    brain = NULL;
     std::cout << " Dog Desctruted" << std::endl;
 }
 

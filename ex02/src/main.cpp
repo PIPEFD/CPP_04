@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pipe <pipe@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:12:57 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/19 00:02:09 by pipe             ###   ########.fr       */
+/*   Updated: 2024/12/19 18:05:54 by dbonilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,16 +43,30 @@ int main() {
         delete animals[i];
     }
 
-    std::cout << "\n=== Prueba de Constructor de Copia ===" << std::endl;
+    std::cout << "\n=== Prueba de Constructor de Copia Dog ===" << std::endl;
     Dog originalDog;
     originalDog.makeSound();
     Dog copiedDog(originalDog); // Llamada al constructor de copia
     copiedDog.makeSound();
 
-    std::cout << "\n=== Prueba de Operador de Asignación ===" << std::endl;
+    std::cout << "\n=== Prueba de Constructor de Copia Cat ===" << std::endl;
+    Cat originalCat;
+    originalCat.makeSound();
+    Cat copiedCat(originalCat); // Llamada al constructor de copia
+    copiedCat.makeSound();
+
+    std::cout << "\n=== Prueba de Operador de Asignación clase Dog ===" << std::endl;
     Dog assignedDog;
     assignedDog = originalDog; // Llamada al operador de asignación
     assignedDog.makeSound();
+
+    std::cout << "\n=== Prueba de Operador de Asignación clase Dog ===" << std::endl;
+    Cat assignedCat;
+    assignedCat = originalCat; // Llamada al operador de asignación
+    assignedCat.makeSound();
+
+    
+    
 
     std::cout << "\n=== Modificación de Valores ===" << std::endl;
     std::cout << "Modificando tipo en assignedDog..." << std::endl;

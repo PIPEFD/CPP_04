@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pipe <pipe@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:02:30 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/19 00:05:47 by pipe             ###   ########.fr       */
+/*   Updated: 2024/12/19 18:08:17 by dbonilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,15 @@ Cat &Cat::operator=(const Cat &rhs)
     if (this !=  &rhs)
     {
         AAnimal::operator=(rhs);
-        delete (brain);
-        type = rhs.type;
+        if (brain)
+        {
+            delete (brain);
+            brain = NULL;
+        }
+        if (rhs.brain)
+        {
+            brain = new Brain(*rhs.brain);
+        }
     }
     return(*this);
 }
@@ -38,6 +45,7 @@ Cat &Cat::operator=(const Cat &rhs)
 Cat::~Cat()
 {
     delete (brain);
+    brain = NULL; 
     std::cout << "Cat Destructed" << std::endl;
 }
 

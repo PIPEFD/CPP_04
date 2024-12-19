@@ -6,7 +6,7 @@
 /*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:51:38 by dbonilla          #+#    #+#             */
-/*   Updated: 2024/12/18 14:00:40 by dbonilla         ###   ########.fr       */
+/*   Updated: 2024/12/19 17:53:51 by dbonilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Brain::Brain()
 {
-    for (int i; i < 100;  i++)
+    for (int i = 0; i < 100;  i++)
     {
         ideas[i] = "Default idea";
     }
